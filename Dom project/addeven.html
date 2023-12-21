@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2>click below to know the date</h2>
+    <button id="btn" type="button">Date</button>
+    <h4 id="show"></h4>
+    <script>
+      let date =  document.getElementById("btn");
+      date.addEventListener("click" , show);
+      function show(){
+        let date = new Date();
+        document.getElementById("show").innerHTML = date;
+    }
+    date.addEventListener("click", change);
+    function change(){
+        date.style.backgroundColor = "red";
+    }
+       
+     
+    </script>
+    
+</body>
+</html>

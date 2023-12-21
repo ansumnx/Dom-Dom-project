@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Number Guessing Game</h2>
+    <h4>Guess number under 1-10</h4>
+    <input type="text" id="num">
+    <button type="button" id="btn">submit</button>
+    <p id="p"></p>
+
+    <script>
+        document.getElementById("btn").onclick = function(){
+            let num = document.getElementById("num").value;
+            num = Number(num);
+            if(isNaN(num) || num >10 || num<=0){
+                document.getElementById("p").innerHTML = "enter a valid number";
+            }
+            else{
+                let random = Math.floor(Math.random()*10)+1;
+                if(num==random){
+                    let x =  "your guess is correct";
+                    document.getElementById("p").innerHTML = x;
+                }
+                else{
+                    document.getElementById("p").innerHTML = "Guess agein !"
+                }
+            }
+
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

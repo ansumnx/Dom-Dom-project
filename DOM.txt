@@ -1,0 +1,77 @@
+// DOM - document object model
+~it is an api interface to work with html.
+~we can change html document with the help of Dom.
+
+// ways to select in Dom
+~select element by id
+~select element by class
+~select element by tag name
+~query selector 
+~query selector All
+
+
+~Traversing element in js - selecting one element with the help of other
+-select first child/last child / all child / sibling / nextsibling
+
+// work with Dom
+~inner.html - TO SET AND FETCH ELEMENT
+
+~append element
+create element  , give id/class , write/read , body through js
+
+~insert element
+~remove element
+~clone element
+~replace element
+~insert/adjust element
+
+~change attribute
+
+// ways to change style through js
+
+~inline style change
+~set.attribute style
+~directly
+
+~get computed css
+-to know what css is already in use
+
+~css change
+~height and width
+-off set - border,padding,margin include
+-client - only padding include
+
+~Dom event
+-event listener
+-remove event listener
+
+~page load event
+
+//mouse event
+-onclick
+-oncontextmenu //if right side of mouse click
+-ondblclick // only double click work
+-onmousedown // work instent
+-onmouseup // work when you release mouse
+-onmouseover // work on hover:in
+-onmouseout // work on hover:out
+
+//key event
+~window.addeventlistner("keyup",fun())
+~window.addeventlistner("keydown",)
+
+//scroll event
+~window.addeventlistner("scroll",fun())
+~window.addeventlistner("wheel",)
+
+//Input event
+~focus
+~blur
+~change
+
+//EVENT BUBBLING (INNER WORK FIRST)
+~child will exsicute first then parent ()
+//EVENT CAPTURING (OUTTER WORK FIRST)
+~parent will exsicute first then child (true)
+
+~prevent default

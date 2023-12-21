@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #whole {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: crimson;
+        }
+
+        #whole h3 {
+            text-align: center;
+            font-size: 10vw;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+        }
+
+        #whole #cr {
+            width: 30px;
+            height: 30px;
+            background-color: royalblue;
+            border-radius: 50px;
+            position: absolute;
+            mix-blend-mode: darken;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="whole">
+        <h3>ansumnxcut</h3>
+        <div id="cr">
+
+        </div>
+
+    </div>
+    <script>
+        let curser = document.getElementById("cr");
+        let whole = document.getElementById("whole");
+        whole.addEventListener("mousemove", function (move) {
+           curser.style.left = move.x+"px";
+           curser.style.top = move.y+"px";
+        })
+    </script>
+
+</body>
+
+</html>

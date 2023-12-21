@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="name">name</label>
+    <input type="text" id="name">
+    <input type="submit" value="submit" onclick=" submit()">
+    <p id="p"></p>
+
+
+    <script>
+        function submit(){
+            let name = document.getElementById("name").value;
+            if(name == "")
+            {
+                alert("enter your name");
+            }
+            else{
+                document.getElementById("p").innerHTML = "wecome back";
+            }
+
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

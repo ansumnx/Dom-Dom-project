@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <style>
+        .login {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            align-items: center;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: start;
+            font-size: 30px;
+        }
+
+        .input {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: capitalize;
+            padding: 14px;
+            /* background-color: tan; */
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .p {
+            color: #0067b0;
+            margin-top: 0;
+            font-size: 17px;
+            position: absolute;
+        }
+
+        .input input {
+            padding: 10px 35px;
+            border: none;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #bt {
+            text-align: center;
+            padding: 10px 36px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: royalblue;
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login">
+        <h2>LOGIN FORM</h2>
+        <form action="" onsubmit=" return login()">
+
+            <div class="input">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <p id="user" class="p"></p>
+            </div>
+            <div class="input">
+                <label for="pswd">password</label>
+                <input type="password" id="pswd">
+                <p id="ps" class="p"></p>
+            </div>
+            <div class="btn">
+                <button type="submit" id="bt">login</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+
+        let username = document.getElementById("name");
+        let password = document.getElementById("pswd");
+        let flag = 1;
+
+        function login() {
+            if (username.value == "") {
+                document.getElementById("user").innerHTML = "Enter username";
+                flag = 0;
+            }
+            else if (username.value.length < 5) {
+                document.getElementById("user").innerHTML = "Enter minimum 5 charector";
+                flag = 0;
+            }
+            else {
+                document.getElementById("user").innerHTML = "";
+                flag = 1;
+            }
+            if (password.value < 5) {
+                document.getElementById("ps").innerHTML = "Enter 4 digit password";
+                flag = 0;
+            }
+            else {
+                
+                document.getElementById("ps").innerHTML = "";
+                flag = 1;
+            }
+            if (flag) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+
+
+
+    </script>
+
+
+
+    </script>
+
+</body>
+
+</html>

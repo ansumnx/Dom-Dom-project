@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop watch</title>
+    <style>
+        .watch{
+            /* padding: 40px; */
+            font-size: 20px;
+            text-align: center;
+        }
+        span{
+            display: inline-block;
+            padding: 10px;
+            color: #0067b0;
+            font-size: 40px;
+            font-weight: bold;
+            
+            
+        }
+        .control{
+            text-align: center;
+        }
+        .control button{
+            padding: 10px 20px;
+            margin-left: 30px;
+        }
+        #start{
+            background-color: rgb(165, 119, 119);
+            border: none;
+            border-radius: 3px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #stop{
+        
+            background-color: royalblue;
+            border: none;
+            border-radius: 3px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #reset{
+            background-color: crimson;
+            border: none;
+            border-radius: 3px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    
+  <div class="watch">
+   
+    <h3><span id="hr">00</span>HR <span id="min">00</span>MIN <span id="sec">00</span>SEC</h3>
+  </div>
+  <div class="control">
+    <button type="button" id="start" onclick="start()">START</button>
+    <button type="button" id="stop" onclick="stop()">STOP</button>
+    <button type="button" id="reset" onclick="reset()">RESET</button>
+  </div>
+  <script>
+
+    // let start = 0;
+    // let stop = 0;
+    // let reset = 0;
+
+     
+
+    function start(){
+        document.getElementById("hr").innerHTML = "45";
+        
+    }
+
+    // function stop(){
+
+    // }
+
+    // function reset(){
+
+    // }
+
+
+
+
+
+  </script>
+
+</body>
+</html>

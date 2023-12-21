@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background changer</title>
+    <style>
+        .color{
+            width: 30px;
+            height: 30px;
+            border: 1px solid gray;
+            display: inline-block;
+            cursor: pointer;
+            margin: 10px;
+        }
+        #white{
+            background-color: aliceblue;
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: #0067b0;
+        }
+        #black{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="color" id="white" onclick="change('white')"></div>
+    <div class="color" id="red" onclick="change('red')"></div>
+    <div class="color" id="blue" onclick="change('#0067b0')"></div>
+    <div class="color" id="black" onclick="change('black')"></div>
+
+    <h2 id="b">welcome boys</h2>
+    <h5 id="g">welcome girls</h5>
+
+
+    <script>
+   
+   function change(color){
+    document.body.style.background = color;
+    let b = document.getElementById("b");
+    let g = document.getElementById("g");
+    if(color == 'black'){
+       b.style.color = "white";
+       g.style.color = "white";
+    }
+    else{
+        b.style.color = 'black';
+        g.style.color = 'black';
+    }
+   }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word counter</title>
+
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        h2{
+            text-align: center;
+            background-color: #0067b0;
+            color: white;
+            width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #text{
+            width: 717px;
+            height: 300px;
+            display: flex;
+            margin: 0  auto;
+            border: 10px solid #0067b0;
+            outline: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h3{
+            background-color: #0067b0;
+            width: 700px;
+            padding: 20px;
+            text-align: center;
+            font-size: 25px;
+            margin: 0 auto;
+            word-spacing: 10px;
+        }
+        h3 span{
+            color: wheat;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Word and Character Counter</h2>
+    <div id="work">
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+    </div>
+    <h3><span id="w">0 </span>Words and <span id="char">0</span> Character</h3>
+
+    <script>
+    let text = document.getElementById("text");
+
+    text.addEventListener("input",function(){
+        let char = this.value;
+        document.getElementById("char").innerHTML = char.length;
+
+
+       let word = char.trim().split(" ").filter(function(e){
+        return e != "";
+       }).length;
+
+        document.getElementById("w").innerHTML = word;
+
+    })
+
+
+    </script>
+    
+</body>
+</html>
